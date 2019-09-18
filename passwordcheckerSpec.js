@@ -1,11 +1,11 @@
 describe ("password_is_valid", function(){
 it("should be larger than 8 characters", function(){
     let passwordCheck = password_is_valid("ThEmbi190")  
-    expect(passwordCheck).toBe(true);
+    expect(function () {throw("password must contain uppercase and lowercase letters and at least one number")}).toThrow("password must contain uppercase and lowercase letters and at least one number");
 })
 it("should not be null", function(){
     let passwordCheck = password_is_valid("mbi190")
-    expect(passwordCheck).toBe("password must contain uppercase and lowercase letters and at least one number");
+    expect(passwordCheck).toBe(false);
 })
 it("should have at least one uppercase letter",function(){
     let passwordCheck = password_is_valid("ThEmbi190")
